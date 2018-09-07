@@ -42,23 +42,42 @@ table {
 	border-spacing: 0;
 }
 nav {
+	font-family: 'Comfortaa', cursive;
   height: 60px;
   font-size: 50px;
-  line-height: 55px;
+  line-height: 75px;
 }
 .nav {
   padding-left: 10px;
+	color: #283560;
 }
 body {
+	height: 900px;
   background-image: url(/assets/dn27643-1_800.jpg);
   background-position: 0% 30%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .body_text {
-	color: white;
+	font-family: 'Comfortaa', cursive;
+	color: #EED9A0;
+	text-shadow: 2px 2px 2px #6D5B43;
 	font-size: 35px;
 	line-height: 50px;
 	padding-top: 35px;
-	padding-left: 15px;
+	padding-left: 45px;
+}
+
+footer {
+	background-color: #6D5B43;
+	height: 40px;
+	width: 100%;
+	margin-top: 250px;
+}
+
+.footer_text {
+	font-family: 'Comfortaa', cursive;
+	color: #EED9A0;
+	padding-left: 10px;
+	padding-top: 10px;
 }
