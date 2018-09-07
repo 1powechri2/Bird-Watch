@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <ul>
+    <li><% @bird_info.each do |bird| %></li>
+    <li><%= bird.common_name %></li>
+    <li><%= bird.scientific_name %></li>
+    <li><%= bird.location %></li>
+    <li><%= bird.observation_date %></li>
+    <li><%= bird.lat %></li>
+    <li><%= bird.long %></li>
+    <li><%= bird.private_location? %></li>
+    <li><%= bird.photo %></li>
+    <% end %>
+  </ul>
+</html>

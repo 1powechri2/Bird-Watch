@@ -51,7 +51,7 @@ nav {
   padding-left: 10px;
 	color: #283560;
 }
-body {
+.dashboard_body {
 	height: 900px;
   background-image: url(/assets/dn27643-1_800.jpg);
   background-position: 0% 30%;
