@@ -42,18 +42,23 @@ table {
 	border-spacing: 0;
 }
 nav {
-  background-color: Blue;
-  background-image: (../../assets/images/dn27643-1_800.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 60px;
   font-size: 50px;
   line-height: 55px;
 }
+.nav {
+  padding-left: 10px;
+}
 body {
   background-image: url(/assets/dn27643-1_800.jpg);
-  background-position: center;
+  background-position: 0% 30%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.body_text {
+	color: white;
+	font-size: 35px;
+	line-height: 50px;
+	padding-top: 35px;
+	padding-left: 15px;
 }
