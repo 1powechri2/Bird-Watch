@@ -1,5 +1,5 @@
 class BirdsController < ApplicationController
   def index
-    @bird_info = BirdPresenter.new(params[:location][:zip]).bird_info
+    @birds = BirdPresenter.new(params[:location][:zip]).birds
   end
 end
