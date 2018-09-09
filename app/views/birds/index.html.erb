@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
+  <body>
+    <p><%= @birds.count %> Results </p><br>
   <ul>
     <li><% @birds.each do |bird| %></li>
-    <li><%= bird.common_name %></li>
-    <li><%= bird.scientific_name %></li>
-    <li><%= bird.location %></li>
-    <li><%= bird.observation_date %></li>
-    <li><%= bird.lat %></li>
-    <li><%= bird.long %></li>
-    <li><%= bird.private_location? %></li>
+    <li>Common Name: <%= bird.common_name %></li>
+    <li>Scientific Name: <%= bird.scientific_name %></li>
+    <li>Location: <%= bird.location %></li>
+    <li>Date and Time of Observation: <%= bird.observation_date %></li>
+    <li>Latitude: <%= bird.lat %></li>
+    <li>Longitude: <%= bird.long %></li>
+    <li><%= bird.private_location? %></li><br>
     <% end %>
   </ul>
+</body>
 </html>
