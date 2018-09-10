@@ -4,7 +4,8 @@ class Bird
               :location,
               :observation_date,
               :lat,
-              :long
+              :long,
+              :private
 
   def initialize(attributes)
     @common_name = attributes[:comName]
