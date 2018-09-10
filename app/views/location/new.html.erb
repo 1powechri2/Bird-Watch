@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <%= form_for :location, url: :zip_location, method: :get do |f| %>
-    <%= f.label :zip %>
-    <%= f.text_field :zip %>
-    <%= f.submit 'Get Location Data' %>
+    <p>Zip Code<%= f.text_field :zip %>
+    <%= f.submit 'Get Data By Zip' %></p>
   <% end %>
 </html>
