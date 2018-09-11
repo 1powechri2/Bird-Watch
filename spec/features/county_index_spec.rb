@@ -19,6 +19,12 @@ describe 'A user can see latest bird sightings' do
         page.select 'Denver', from: 'County'
 
         click_on 'Get Birds By County'
+
+        expect(page.status_code).to be(200)
+        expect(page).to have_content('10 Results')
+        expect(page).to have_content('Scientific Name: Euphagus cyanocephalus')
+        expect(page).to have_content('Scientific Name: Cathartes aura')
+        #hell yes, taxonomy rules!
       end
     end
   end

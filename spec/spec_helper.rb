@@ -1,5 +1,8 @@
 require 'webmock/rspec'
 require 'vcr'
+require 'simplecov'
+SimpleCov.start
+
 RSpec.configure do |config|
   config.before(:each) do
     WebMock.reset!

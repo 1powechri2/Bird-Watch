@@ -23,6 +23,7 @@ group :development, :test do
   gem 'capybara'
   gem 'webmock'
   gem 'vcr'
+  gem 'simplecov'
 end
 
 group :development do
