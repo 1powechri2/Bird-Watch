@@ -1,18 +1,32 @@
 class BirdPresenter
   def initialize(locale)
-    @coordinates = LocationService.new(locale)
+    @locale = locale
   end
 
-  def locatio_info
-    @coordinates.zip_into_lat_and_long_coordinates_hash
+  def coordinates
+    LocationService.new(@locale)
   end
 
-  def birds_data(location = locatio_info)
-    BirdService.new(location).birds
+  def location_info
+    coordinates.zip_into_lat_and_long_coordinates_hash
+  end
+
+  def birds_data
+    BirdService.new(location_info).birds
   end
 
   def birds
     birds_data.map do |attributes|
+      Bird.new(attributes)
+    end
+  end
+
+  def county_bird_data
+    BirdService.new(@locale).county_birds
+  end
+
+  def county_birds
+    county_bird_data.map do |attributes|
       Bird.new(attributes)
     end
   end

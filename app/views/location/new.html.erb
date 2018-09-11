@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <%= form_for :location, url: :zip_location, method: :get do |f| %>
-    <p>Zip Code<%= f.text_field :zip %>
-    <%= f.submit 'Get Data By Zip' %></p>
-  <% end %>
+  <div class='zip_field'>
+    <%= form_tag zip_location_path, method: :get do %>
+      <%= label_tag :zip %>
+      <%= text_field_tag :zip %>
+      <%= submit_tag 'Get Data By Zip' %>
+    <% end %>
+  </div>
+  <div class='state_field'>
+    <%= form_tag state_location_path, method: :get do |f| %>
+    <%= label_tag :state %>
+    <%= select_tag :state,  options_for_select(@location.states) %>
+    <%= submit_tag 'Get Data By State' %>
+    <% end %>
+  </div>
 </html>

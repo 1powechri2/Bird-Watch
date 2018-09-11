@@ -17,7 +17,7 @@ class BirdService
     end
   end
 
-  def request
+  def lat_lng_request
     connection.get do |req|
       req.url "/ws2.0/data/obs/geo/recent?lat=#{lat}&lng=#{lng}"
       req.headers['Content-Type'] = 'application/json'
@@ -25,7 +25,31 @@ class BirdService
     end
   end
 
+  def county_request
+    connection.get do |req|
+      req.url "/ws2.0/ref/region/list/subnational2/US-#{@location}.json"
+      req.headers['Content-Type'] = 'application/json'
+      req.headers['X-eBirdApiToken'] = ENV['BIRD_KEY']
+    end
+  end
+
+  def county_code_request
+    connection.get do |req|
+      req.url "/ws2.0/data/obs/#{@location}/recent"
+      req.headers['Content-Type'] = 'application/json'
+      req.headers['X-eBirdApiToken'] = ENV['BIRD_KEY']
+    end
+  end
+
   def birds
-    JSON.parse(request.body, symbolize_names: true)
+    JSON.parse(lat_lng_request.body, symbolize_names: true)
+  end
+
+  def counties
+    JSON.parse(county_request.body, symbolize_names: true)
+  end
+
+  def county_birds
+    JSON.parse(county_code_request.body, symbolize_names: true)
   end
 end

@@ -12,7 +12,7 @@ describe 'A user can see latest bird sightings' do
 
         fill_in 'Zip', with: 80203
 
-        click_on 'Get Location Data'
+        click_on 'Get Data By Zip'
 
         expect(page.status_code).to be(200)
         expect(current_path).to eq(zip_location_path)
