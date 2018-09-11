@@ -51,6 +51,9 @@ nav {
   padding-left: 10px;
 	color: #283560;
 }
+body {
+	background-color: #85ABEA;
+}
 .dashboard_body {
 	height: 900px;
   background-image: url(/assets/dn27643-1_800.jpg);
@@ -69,7 +72,7 @@ nav {
 }
 
 footer {
-	background-color: #6D5B43;
+	background-color: #864E3D;
 	height: 40px;
 	width: 100%;
 	margin-top: 250px;
@@ -80,6 +83,19 @@ footer {
 	color: #EED9A0;
 	padding-left: 10px;
 	padding-top: 10px;
+}
+
+.search {
+	height: 650px;
+	background-image: url(/assets/yellow-warbler.jpg);
+  background-position: 0% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search_fields {
+	padding-top: 10px;
+	padding-left: 20px;
 }
 
 .container {

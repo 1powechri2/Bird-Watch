@@ -1,5 +1,5 @@
 class StateController < ApplicationController
   def index
-    @counties = LocationPresenter.new(params[:state]).state_counties
+    @locations = LocationPresenter.new(params[:state])
   end
 end
