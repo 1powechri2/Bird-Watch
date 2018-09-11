@@ -104,5 +104,20 @@ footer {
 	grid-template-columns: auto auto auto;
 }
 
-.bird {
+.results_body {
+	height: 750px;
+  background-image: url(/assets/cloud.jpg);
+  background-position: 0% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 12px;
+}
+
+.results_header {
+	font-size: 80px;
+}
+
+.results_link {
+	font-size: 30px;
 }

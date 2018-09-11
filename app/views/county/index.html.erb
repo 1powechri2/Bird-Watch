@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <p>HERE ARE THE LASTEST RESULTS FOR THE COUNTY YOU PROVIDED</p><p><%= link_to "Back To Location Search", locations_path%></p><br>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+  </head>
+  <body class="results_body">
+    <p class="results_header">HERE ARE THE LASTEST RESULTS FOR THE COUNTY YOU PROVIDED</p><p class="results_link"><%= link_to "Back To Location Search", locations_path%></p><br>
       <div class="container">
         <% @birds.each do |bird| %>
           <div class="bird">
