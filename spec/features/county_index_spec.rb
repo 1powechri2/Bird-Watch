@@ -12,7 +12,7 @@ describe 'A user can see latest bird sightings' do
 
         page.select 'CO', from: 'State'
 
-        click_on 'Get Data By State'
+        click_on 'Get Counties By State'
 
         expect(current_path).to eq(state_location_path)
 
@@ -24,7 +24,6 @@ describe 'A user can see latest bird sightings' do
         expect(page).to have_content('10 Results')
         expect(page).to have_content('Scientific Name: Euphagus cyanocephalus')
         expect(page).to have_content('Scientific Name: Cathartes aura')
-        #hell yes, taxonomy rules!
       end
     end
   end

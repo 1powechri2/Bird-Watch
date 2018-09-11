@@ -23,7 +23,7 @@ http_interactions:
       message: '200'
     headers:
       Date:
-      - Tue, 11 Sep 2018 02:33:08 GMT
+      - Tue, 11 Sep 2018 16:06:38 GMT
       Server:
       - Apache
       Cache-Control:
@@ -54,7 +54,7 @@ http_interactions:
         Blanco"},{"code":"US-CO-105","name":"Rio Grande"},{"code":"US-CO-107","name":"Routt"},{"code":"US-CO-109","name":"Saguache"},{"code":"US-CO-111","name":"San
         Juan"},{"code":"US-CO-113","name":"San Miguel"},{"code":"US-CO-115","name":"Sedgwick"},{"code":"US-CO-117","name":"Summit"},{"code":"US-CO-119","name":"Teller"},{"code":"US-CO-121","name":"Washington"},{"code":"US-CO-123","name":"Weld"},{"code":"US-CO-125","name":"Yuma"}]'
     http_version: 
-  recorded_at: Tue, 11 Sep 2018 02:33:08 GMT
+  recorded_at: Tue, 11 Sep 2018 16:06:38 GMT
 - request:
     method: get
     uri: https://ebird.org/ws2.0/data/obs/US-CO-031/recent
@@ -78,7 +78,7 @@ http_interactions:
       message: '200'
     headers:
       Date:
-      - Tue, 11 Sep 2018 02:33:09 GMT
+      - Tue, 11 Sep 2018 16:06:38 GMT
       Server:
       - Apache
       Cache-Control:
@@ -98,79 +98,93 @@ http_interactions:
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '5280'
+      - '5420'
     body:
       encoding: ASCII-8BIT
-      string: '[{"speciesCode":"brebla","comName":"Brewer''s Blackbird","sciName":"Euphagus
-        cyanocephalus","locId":"L2708840","locName":"Denver - Costco (SW Denver)","obsDt":"2018-09-10
-        10:53","howMany":4,"lat":39.6376869,"lng":-105.0859827,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"turvul","comName":"Turkey
+      string: '[{"speciesCode":"killde","comName":"Killdeer","sciName":"Charadrius
+        vociferus","locId":"L2135892","locName":"Westerly Creek Park","obsDt":"2018-09-11
+        07:10","howMany":2,"lat":39.7559995,"lng":-104.8790717,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"wesmea","comName":"Western
+        Meadowlark","sciName":"Sturnella neglecta","locId":"L2135892","locName":"Westerly
+        Creek Park","obsDt":"2018-09-11 07:10","howMany":1,"lat":39.7559995,"lng":-104.8790717,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"amegfi","comName":"American
+        Goldfinch","sciName":"Spinus tristis","locId":"L2853694","locName":"Confluence
+        & Commons Parks","obsDt":"2018-09-11 06:44","howMany":1,"lat":39.7552159,"lng":-105.0069058,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"wlswar","comName":"Wilson''s
+        Warbler","sciName":"Cardellina pusilla","locId":"L2853694","locName":"Confluence
+        & Commons Parks","obsDt":"2018-09-11 06:44","howMany":1,"lat":39.7552159,"lng":-105.0069058,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"rocpig","comName":"Rock
+        Pigeon","sciName":"Columba livia","locId":"L2853694","locName":"Confluence
+        & Commons Parks","obsDt":"2018-09-11 06:44","howMany":41,"lat":39.7552159,"lng":-105.0069058,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"norfli","comName":"Northern
+        Flicker","sciName":"Colaptes auratus","locId":"L2853694","locName":"Confluence
+        & Commons Parks","obsDt":"2018-09-11 06:44","howMany":1,"lat":39.7552159,"lng":-105.0069058,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"mallar3","comName":"Mallard","sciName":"Anas
+        platyrhynchos","locId":"L2853694","locName":"Confluence & Commons Parks","obsDt":"2018-09-11
+        06:44","howMany":1,"lat":39.7552159,"lng":-105.0069058,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"larus","comName":"gull
+        sp.","sciName":"Larinae sp.","locId":"L2853694","locName":"Confluence & Commons
+        Parks","obsDt":"2018-09-11 06:44","howMany":1,"lat":39.7552159,"lng":-105.0069058,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"eursta","comName":"European
+        Starling","sciName":"Sturnus vulgaris","locId":"L2853694","locName":"Confluence
+        & Commons Parks","obsDt":"2018-09-11 06:44","howMany":1,"lat":39.7552159,"lng":-105.0069058,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"doccor","comName":"Double-crested
+        Cormorant","sciName":"Phalacrocorax auritus","locId":"L2853694","locName":"Confluence
+        & Commons Parks","obsDt":"2018-09-11 06:44","howMany":1,"lat":39.7552159,"lng":-105.0069058,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"coohaw","comName":"Cooper''s
+        Hawk","sciName":"Accipiter cooperii","locId":"L2853694","locName":"Confluence
+        & Commons Parks","obsDt":"2018-09-11 06:44","howMany":2,"lat":39.7552159,"lng":-105.0069058,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"amwpel","comName":"American
+        White Pelican","sciName":"Pelecanus erythrorhynchos","locId":"L343087","locName":"Washington
+        Park","obsDt":"2018-09-11 06:15","howMany":10,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"amecro","comName":"American
+        Crow","sciName":"Corvus brachyrhynchos","locId":"L3014577","locName":"High
+        Line Canal Trail--Mamie D. Eisenhower Park to I-25","obsDt":"2018-09-10 18:31","howMany":2,"lat":39.6595122,"lng":-104.9319863,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"houfin","comName":"House
+        Finch","sciName":"Haemorhous mexicanus","locId":"L3014577","locName":"High
+        Line Canal Trail--Mamie D. Eisenhower Park to I-25","obsDt":"2018-09-10 18:31","howMany":1,"lat":39.6595122,"lng":-104.9319863,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"bkcchi","comName":"Black-capped
+        Chickadee","sciName":"Poecile atricapillus","locId":"L3014577","locName":"High
+        Line Canal Trail--Mamie D. Eisenhower Park to I-25","obsDt":"2018-09-10 18:31","howMany":3,"lat":39.6595122,"lng":-104.9319863,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"blujay","comName":"Blue
+        Jay","sciName":"Cyanocitta cristata","locId":"L3014577","locName":"High Line
+        Canal Trail--Mamie D. Eisenhower Park to I-25","obsDt":"2018-09-10 18:00","howMany":4,"lat":39.6595122,"lng":-104.9319863,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"rebnut","comName":"Red-breasted
+        Nuthatch","sciName":"Sitta canadensis","locId":"L3014577","locName":"High
+        Line Canal Trail--Mamie D. Eisenhower Park to I-25","obsDt":"2018-09-10 18:00","howMany":1,"lat":39.6595122,"lng":-104.9319863,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"brebla","comName":"Brewer''s
+        Blackbird","sciName":"Euphagus cyanocephalus","locId":"L2708840","locName":"Denver
+        - Costco (SW Denver)","obsDt":"2018-09-10 10:53","howMany":4,"lat":39.6376869,"lng":-105.0859827,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"turvul","comName":"Turkey
         Vulture","sciName":"Cathartes aura","locId":"L2708840","locName":"Denver -
-        Costco (SW Denver)","obsDt":"2018-09-10 10:53","howMany":3,"lat":39.6376869,"lng":-105.0859827,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"eursta","comName":"European
-        Starling","sciName":"Sturnus vulgaris","locId":"L2708840","locName":"Denver
-        - Costco (SW Denver)","obsDt":"2018-09-10 10:53","howMany":2,"lat":39.6376869,"lng":-105.0859827,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"barswa","comName":"Barn
+        Costco (SW Denver)","obsDt":"2018-09-10 10:53","howMany":3,"lat":39.6376869,"lng":-105.0859827,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"lesgol","comName":"Lesser
+        Goldfinch","sciName":"Spinus psaltria","locId":"L2361171","locName":"my yard","obsDt":"2018-09-10
+        09:35","howMany":2,"lat":39.7087202,"lng":-104.9637287,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"comrav","comName":"Common
+        Raven","sciName":"Corvus corax","locId":"L1188780","locName":"Denver International
+        Airport","obsDt":"2018-09-10 09:05","howMany":1,"lat":39.849403,"lng":-104.6700096,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"swahaw","comName":"Swainson''s
+        Hawk","sciName":"Buteo swainsoni","locId":"L1188780","locName":"Denver International
+        Airport","obsDt":"2018-09-10 09:05","howMany":1,"lat":39.849403,"lng":-104.6700096,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"ribgul","comName":"Ring-billed
+        Gull","sciName":"Larus delawarensis","locId":"L1188780","locName":"Denver
+        International Airport","obsDt":"2018-09-10 09:05","howMany":20,"lat":39.849403,"lng":-104.6700096,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"rethaw","comName":"Red-tailed
+        Hawk","sciName":"Buteo jamaicensis","locId":"L1188780","locName":"Denver International
+        Airport","obsDt":"2018-09-10 09:05","howMany":1,"lat":39.849403,"lng":-104.6700096,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"moudov","comName":"Mourning
+        Dove","sciName":"Zenaida macroura","locId":"L1188780","locName":"Denver International
+        Airport","obsDt":"2018-09-10 09:05","howMany":3,"lat":39.849403,"lng":-104.6700096,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"barswa","comName":"Barn
         Swallow","sciName":"Hirundo rustica","locId":"L232994","locName":"Denver Botanic
-        Gardens and Cheesman Park","obsDt":"2018-09-10 08:54","howMany":28,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"moudov","comName":"Mourning
-        Dove","sciName":"Zenaida macroura","locId":"L232994","locName":"Denver Botanic
-        Gardens and Cheesman Park","obsDt":"2018-09-10 08:54","howMany":2,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"houspa","comName":"House
+        Gardens and Cheesman Park","obsDt":"2018-09-10 08:54","howMany":28,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"houspa","comName":"House
         Sparrow","sciName":"Passer domesticus","locId":"L232994","locName":"Denver
-        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:54","howMany":12,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"houfin","comName":"House
-        Finch","sciName":"Haemorhous mexicanus","locId":"L232994","locName":"Denver
-        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:54","howMany":2,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"dowwoo","comName":"Downy
+        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:54","howMany":12,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"dowwoo","comName":"Downy
         Woodpecker","sciName":"Dryobates pubescens","locId":"L232994","locName":"Denver
-        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:54","howMany":1,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"blujay","comName":"Blue
-        Jay","sciName":"Cyanocitta cristata","locId":"L232994","locName":"Denver Botanic
-        Gardens and Cheesman Park","obsDt":"2018-09-10 08:54","howMany":3,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"bkcchi","comName":"Black-capped
-        Chickadee","sciName":"Poecile atricapillus","locId":"L232994","locName":"Denver
-        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:54","howMany":4,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"amecro","comName":"American
-        Crow","sciName":"Corvus brachyrhynchos","locId":"L232994","locName":"Denver
-        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":3,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"whbnut","comName":"White-breasted
+        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:54","howMany":1,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"brthum","comName":"Broad-tailed
+        Hummingbird","sciName":"Selasphorus platycercus","locId":"L232994","locName":"Denver
+        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":2,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"whbnut","comName":"White-breasted
         Nuthatch","sciName":"Sitta carolinensis","locId":"L232994","locName":"Denver
         Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":3,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"westan","comName":"Western
         Tanager","sciName":"Piranga ludoviciana","locId":"L232994","locName":"Denver
         Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":1,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"rocwre","comName":"Rock
         Wren","sciName":"Salpinctes obsoletus","locId":"L232994","locName":"Denver
-        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":1,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"rebnut","comName":"Red-breasted
-        Nuthatch","sciName":"Sitta canadensis","locId":"L232994","locName":"Denver
-        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":5,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"orcwar","comName":"Orange-crowned
+        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":1,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"orcwar","comName":"Orange-crowned
         Warbler","sciName":"Oreothlypis celata","locId":"L232994","locName":"Denver
-        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":1,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"norfli","comName":"Northern
-        Flicker","sciName":"Colaptes auratus","locId":"L232994","locName":"Denver
-        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":3,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"houwre","comName":"House
+        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":1,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"houwre","comName":"House
         Wren","sciName":"Troglodytes aedon","locId":"L232994","locName":"Denver Botanic
         Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":2,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"bushti","comName":"Bushtit","sciName":"Psaltriparus
         minimus","locId":"L232994","locName":"Denver Botanic Gardens and Cheesman
-        Park","obsDt":"2018-09-10 08:51","howMany":2,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"brthum","comName":"Broad-tailed
-        Hummingbird","sciName":"Selasphorus platycercus","locId":"L232994","locName":"Denver
-        Botanic Gardens and Cheesman Park","obsDt":"2018-09-10 08:51","howMany":2,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"amegfi","comName":"American
-        Goldfinch","sciName":"Spinus tristis","locId":"L7274929","locName":"Home Sweet
-        Home, Denver US-CO (39.7086,-104.9187)","obsDt":"2018-09-10 08:32","howMany":9,"lat":39.708571,"lng":-104.918738,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"spotow","comName":"Spotted
+        Park","obsDt":"2018-09-10 08:51","howMany":2,"lat":39.7318119,"lng":-104.9635506,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"spotow","comName":"Spotted
         Towhee","sciName":"Pipilo maculatus","locId":"L7274929","locName":"Home Sweet
-        Home, Denver US-CO (39.7086,-104.9187)","obsDt":"2018-09-10 08:32","howMany":1,"lat":39.708571,"lng":-104.918738,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"lesgol","comName":"Lesser
-        Goldfinch","sciName":"Spinus psaltria","locId":"L7274929","locName":"Home
-        Sweet Home, Denver US-CO (39.7086,-104.9187)","obsDt":"2018-09-10 08:32","howMany":2,"lat":39.708571,"lng":-104.918738,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"comnig","comName":"Common
+        Home, Denver US-CO (39.7086,-104.9187)","obsDt":"2018-09-10 08:32","howMany":1,"lat":39.708571,"lng":-104.918738,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"comnig","comName":"Common
         Nighthawk","sciName":"Chordeiles minor","locId":"L2135892","locName":"Westerly
         Creek Park","obsDt":"2018-09-09 18:47","howMany":1,"lat":39.7559995,"lng":-104.8790717,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"y00475","comName":"American
         Coot","sciName":"Fulica americana","locId":"L2135892","locName":"Westerly
-        Creek Park","obsDt":"2018-09-09 18:47","howMany":1,"lat":39.7559995,"lng":-104.8790717,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"amwpel","comName":"American
-        White Pelican","sciName":"Pelecanus erythrorhynchos","locId":"L343087","locName":"Washington
-        Park","obsDt":"2018-09-09 15:37","howMany":8,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"snoegr","comName":"Snowy
-        Egret","sciName":"Egretta thula","locId":"L343087","locName":"Washington Park","obsDt":"2018-09-09
-        15:37","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"mallar3","comName":"Mallard","sciName":"Anas
-        platyrhynchos","locId":"L343087","locName":"Washington Park","obsDt":"2018-09-09
-        15:37","howMany":75,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"grbher3","comName":"Great
-        Blue Heron","sciName":"Ardea herodias","locId":"L343087","locName":"Washington
-        Park","obsDt":"2018-09-09 15:37","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"doccor","comName":"Double-crested
-        Cormorant","sciName":"Phalacrocorax auritus","locId":"L343087","locName":"Washington
-        Park","obsDt":"2018-09-09 15:37","howMany":7,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"cangoo","comName":"Canada
+        Creek Park","obsDt":"2018-09-09 18:47","howMany":1,"lat":39.7559995,"lng":-104.8790717,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"cangoo","comName":"Canada
         Goose","sciName":"Branta canadensis","locId":"L343087","locName":"Washington
-        Park","obsDt":"2018-09-09 15:37","howMany":130,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"rocpig","comName":"Rock
-        Pigeon","sciName":"Columba livia","locId":"L4576173","locName":"US-CO-Denver-4321
-        Tennyson St - 39.7752x-105.0441","obsDt":"2018-09-09 10:55","howMany":3,"lat":39.775209,"lng":-105.044131,"obsValid":true,"obsReviewed":false,"locationPrivate":true},{"speciesCode":"belkin1","comName":"Belted
+        Park","obsDt":"2018-09-09 15:37","howMany":130,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"snoegr","comName":"Snowy
+        Egret","sciName":"Egretta thula","locId":"L343087","locName":"Washington Park","obsDt":"2018-09-09
+        15:37","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"grbher3","comName":"Great
+        Blue Heron","sciName":"Ardea herodias","locId":"L343087","locName":"Washington
+        Park","obsDt":"2018-09-09 15:37","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"belkin1","comName":"Belted
         Kingfisher","sciName":"Megaceryle alcyon","locId":"L343087","locName":"Washington
-        Park","obsDt":"2018-09-09 09:02","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"wlswar","comName":"Wilson''s
-        Warbler","sciName":"Cardellina pusilla","locId":"L343087","locName":"Washington
-        Park","obsDt":"2018-09-09 09:02","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"ribgul","comName":"Ring-billed
-        Gull","sciName":"Larus delawarensis","locId":"L343087","locName":"Washington
         Park","obsDt":"2018-09-09 09:02","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"pibgre","comName":"Pied-billed
         Grebe","sciName":"Podilymbus podiceps","locId":"L343087","locName":"Washington
         Park","obsDt":"2018-09-09 09:02","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"norsho","comName":"Northern
@@ -179,9 +193,7 @@ http_interactions:
         Teal","sciName":"Anas crecca","locId":"L343087","locName":"Washington Park","obsDt":"2018-09-09
         09:02","howMany":2,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"gadwal","comName":"Gadwall","sciName":"Mareca
         strepera","locId":"L343087","locName":"Washington Park","obsDt":"2018-09-09
-        09:02","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"coohaw","comName":"Cooper''s
-        Hawk","sciName":"Accipiter cooperii","locId":"L343087","locName":"Washington
-        Park","obsDt":"2018-09-09 09:02","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"chispa","comName":"Chipping
+        09:02","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"chispa","comName":"Chipping
         Sparrow","sciName":"Spizella passerina","locId":"L343087","locName":"Washington
         Park","obsDt":"2018-09-09 09:02","howMany":1,"lat":39.7006493,"lng":-104.9716616,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"buggna","comName":"Blue-gray
         Gnatcatcher","sciName":"Polioptila caerulea","locId":"L2135892","locName":"Westerly
@@ -197,15 +209,11 @@ http_interactions:
         Magpie","sciName":"Pica hudsonia","locId":"L4954897","locName":"First Creek
         at DEN Open Space","obsDt":"2018-09-09 08:06","howMany":1,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"whcspa","comName":"White-crowned
         Sparrow","sciName":"Zonotrichia leucophrys","locId":"L4954897","locName":"First
-        Creek at DEN Open Space","obsDt":"2018-09-09 08:06","howMany":1,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"rethaw","comName":"Red-tailed
-        Hawk","sciName":"Buteo jamaicensis","locId":"L4954897","locName":"First Creek
-        at DEN Open Space","obsDt":"2018-09-09 08:06","howMany":2,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"norhar2","comName":"Northern
+        Creek at DEN Open Space","obsDt":"2018-09-09 08:06","howMany":1,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"norhar2","comName":"Northern
         Harrier","sciName":"Circus hudsonius","locId":"L4954897","locName":"First
         Creek at DEN Open Space","obsDt":"2018-09-09 08:06","howMany":2,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"larspa","comName":"Lark
         Sparrow","sciName":"Chondestes grammacus","locId":"L4954897","locName":"First
-        Creek at DEN Open Space","obsDt":"2018-09-09 08:06","howMany":3,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"killde","comName":"Killdeer","sciName":"Charadrius
-        vociferus","locId":"L4954897","locName":"First Creek at DEN Open Space","obsDt":"2018-09-09
-        08:06","howMany":1,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"amekes","comName":"American
+        Creek at DEN Open Space","obsDt":"2018-09-09 08:06","howMany":3,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"amekes","comName":"American
         Kestrel","sciName":"Falco sparverius","locId":"L2135892","locName":"Westerly
         Creek Park","obsDt":"2018-09-09 07:52","howMany":1,"lat":39.7559995,"lng":-104.8790717,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"amerob","comName":"American
         Robin","sciName":"Turdus migratorius","locId":"L167923","locName":"Bluff Lake
@@ -246,11 +254,7 @@ http_interactions:
         Grosbeak","sciName":"Pheucticus melanocephalus","locId":"L4954897","locName":"First
         Creek at DEN Open Space","obsDt":"2018-09-08 05:57","howMany":1,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"yebcha","comName":"Yellow-breasted
         Chat","sciName":"Icteria virens","locId":"L4954897","locName":"First Creek
-        at DEN Open Space","obsDt":"2018-09-08 05:57","howMany":1,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"wesmea","comName":"Western
-        Meadowlark","sciName":"Sturnella neglecta","locId":"L4954897","locName":"First
-        Creek at DEN Open Space","obsDt":"2018-09-08 05:57","howMany":2,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"swahaw","comName":"Swainson''s
-        Hawk","sciName":"Buteo swainsoni","locId":"L4954897","locName":"First Creek
-        at DEN Open Space","obsDt":"2018-09-08 05:57","howMany":2,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"lazbun","comName":"Lazuli
+        at DEN Open Space","obsDt":"2018-09-08 05:57","howMany":1,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"lazbun","comName":"Lazuli
         Bunting","sciName":"Passerina amoena","locId":"L4954897","locName":"First
         Creek at DEN Open Space","obsDt":"2018-09-08 05:57","howMany":2,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"grhowl","comName":"Great
         Horned Owl","sciName":"Bubo virginianus","locId":"L4954897","locName":"First
@@ -358,9 +362,7 @@ http_interactions:
         sp.","sciName":"Falco sp.","locId":"L2135892","locName":"Westerly Creek Park","obsDt":"2018-09-01
         07:31","howMany":1,"lat":39.7559995,"lng":-104.8790717,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"wilfly","comName":"Willow
         Flycatcher","sciName":"Empidonax traillii","locId":"L2135892","locName":"Westerly
-        Creek Park","obsDt":"2018-09-01 07:31","howMany":1,"lat":39.7559995,"lng":-104.8790717,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"larus","comName":"gull
-        sp.","sciName":"Larinae sp.","locId":"L2135892","locName":"Westerly Creek
-        Park","obsDt":"2018-09-01 07:31","howMany":1,"lat":39.7559995,"lng":-104.8790717,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"horlar","comName":"Horned
+        Creek Park","obsDt":"2018-09-01 07:31","howMany":1,"lat":39.7559995,"lng":-104.8790717,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"horlar","comName":"Horned
         Lark","sciName":"Eremophila alpestris","locId":"L4954897","locName":"First
         Creek at DEN Open Space","obsDt":"2018-09-01 05:47","howMany":1,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false},{"speciesCode":"prafal","comName":"Prairie
         Falcon","sciName":"Falco mexicanus","locId":"L4954897","locName":"First Creek
@@ -376,5 +378,5 @@ http_interactions:
         Rail","sciName":"Rallus limicola","locId":"L4954897","locName":"First Creek
         at DEN Open Space","obsDt":"2018-08-29 17:32","howMany":1,"lat":39.8046083,"lng":-104.7891936,"obsValid":true,"obsReviewed":false,"locationPrivate":false}]'
     http_version: 
-  recorded_at: Tue, 11 Sep 2018 02:33:09 GMT
+  recorded_at: Tue, 11 Sep 2018 16:06:39 GMT
 recorded_with: VCR 4.0.0

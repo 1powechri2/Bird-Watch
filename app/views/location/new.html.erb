@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
+  <p>Search for Bird Sightings by Zip Code</p>
   <div class='zip_field'>
     <%= form_tag zip_location_path, method: :get do %>
-      <%= label_tag :zip %>
       <%= text_field_tag :zip %>
       <%= submit_tag 'Get Data By Zip' %>
     <% end %>
   </div>
+  <p>Choose a State from the Dropdown in Order to Find a Specific County</p>
   <div class='state_field'>
     <%= form_tag state_location_path, method: :get do |f| %>
-    <%= label_tag :state %>
     <%= select_tag :state,  options_for_select(@location.states) %>
-    <%= submit_tag 'Get Data By State' %>
+    <%= submit_tag 'Get Counties By State' %>
     <% end %>
   </div>
 </html>

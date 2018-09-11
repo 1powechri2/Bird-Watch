@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <p><%= @birds.count %> Results </p><br>
-  <ul>
-    <li><% @birds.each do |bird| %></li>
-    <li>Common Name: <%= bird.common_name %></li>
-    <li>Scientific Name: <%= bird.scientific_name %></li>
-    <li>Location: <%= bird.location %></li>
-    <li>Date and Time of Observation: <%= bird.observation_date %></li>
-    <li>Latitude: <%= bird.lat %></li>
-    <li>Longitude: <%= bird.long %></li>
-    <li><%= bird.private_location? %></li><br>
-    <% end %>
-  </ul>
-  <%= will_paginate @birds %>
-</body>
+    <p>HERE ARE THE LASTEST RESULTS FOR THE COUNTY YOU PROVIDED</p><p><%= link_to "Back To Location Search", locations_path%></p><br>
+      <div class="container">
+        <% @birds.each do |bird| %>
+          <div class="bird">
+            <p>Common Name: <%= bird.common_name %></p>
+            <p>Scientific Name: <%= bird.scientific_name %></p>
+            <p><%= link_to "Go to This Bird's Wikipedia", "https://en.wikipedia.org/wiki/#{bird.scientific_name.downcase}", target: :_blank%></p>
+            <p>Location: <%= bird.location %></p>
+            <p>Date and Time of Observation: <%= bird.observation_date %></p>
+            <p>Latitude: <%= bird.lat %></p>
+            <p>Longitude: <%= bird.long %></p>
+            <p><%= bird.private_location? %></p><br>
+          </div>
+        <% end %>
+      </div>
+      <%= will_paginate @birds %>
+  </body>
 </html>
