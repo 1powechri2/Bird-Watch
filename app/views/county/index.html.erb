@@ -4,7 +4,15 @@
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
   </head>
   <body class="results_body">
-    <p class="results_header">HERE ARE THE LASTEST RESULTS FOR THE COUNTY YOU PROVIDED</p><p class="results_link"><%= link_to "Back To Location Search", locations_path%></p><br>
+    <p class="results_header">HERE ARE THE LATEST RESULTS FOR THE COUNTY YOU PROVIDED</p><p class="results_link"><%= link_to "Back To Location Search", locations_path%></p><br>
+    <div class="recent_sightings_number">
+      <p>SELECT A NUMBER OF MOST RECENT SIGHTINGS TO SEE THEM ON A MAP</p>
+      <%= form_tag bird_map_path, method: :get do |f| %>
+      <%= select_tag :recent_number,  options_for_select(@recent_sightings_array) %>
+      <%= hidden_field_tag(:birds, "#{@birds}") %>
+      <%= submit_tag 'Get Map' %>
+      <% end %>
+    </div>
       <div class="container">
         <% @birds.each do |bird| %>
           <div class="bird">

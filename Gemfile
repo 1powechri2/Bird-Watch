@@ -12,7 +12,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
-gem 'unsplash'
+gem 'rgeo', '>= 1.0.0'
+gem 'rgeo-geojson'
 gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
@@ -20,10 +21,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'pry'
+  gem 'simplecov'
   gem 'capybara'
   gem 'webmock'
   gem 'vcr'
-  gem 'simplecov'
 end
 
 group :development do

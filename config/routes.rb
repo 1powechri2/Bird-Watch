@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/zip_location', to: 'zip#index'
   get '/state_location', to: 'state#index'
   get '/county_birds', to: 'county#index'
+  get '/bird_map', to: 'map#show'
 end

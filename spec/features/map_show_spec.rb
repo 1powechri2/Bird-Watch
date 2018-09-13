@@ -3,12 +3,8 @@ require 'rails_helper'
 describe 'A user can see latest bird sightings' do
   context 'from the hompage the user clicks the link and ends up on the search page' do
     it 'fills in the county field and finds bird data for that field' do
-      VCR.use_cassette("county_birds") do
-        visit root_path
-
-        click_on 'click here'
-
-        expect(current_path).to eq(locations_path)
+      VCR.use_cassette('map') do
+        visit locations_path
 
         page.select 'CO', from: :state
 
@@ -20,8 +16,13 @@ describe 'A user can see latest bird sightings' do
 
         click_on 'Get Birds By County'
 
-        expect(page.status_code).to be(200)
-        expect(page).to have_content('HERE ARE THE LATEST RESULTS FOR THE COUNTY YOU PROVIDED')
+        expect(current_path).to eq(county_birds_path)
+
+        page.select 5, from: :recent_number
+
+        click_on 'Get Map'
+
+        expect(current_path).to eq(bird_map_path)
       end
     end
   end
