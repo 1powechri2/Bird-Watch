@@ -27,27 +27,26 @@
       </div>
       <div id='map'></div>
       <script>
+        var locations = JSON.parse('<%= @map_geo_json.to_json %>'.replace(/&quot;/g, '"'));
+
         mapboxgl.accessToken = 'pk.eyJ1IjoiMXBvd2VjaHJpMiIsImEiOiJjam0wb2Z3MXcwN3Z2M3BvNnViMXg2cmM0In0.C8-oMYvIyi9lDJ4FLFH1EQ';
         var map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/mapbox/light-v9',
-          center: [-96, 37.8],
-          zoom: 3
+          center: [locations[0].geometry.coordinates[0], locations[0].geometry.coordinates[1]],
+          zoom: 5
         });
-        var locations = JSON.parse('<%= @map_geo_json.to_json %>'.replace(/&quot;/g, '"'));
 
         var geojson = {
         type: 'FeatureCollection',
         features: locations
         };
-      // add markers to map
+
         geojson.features.forEach(function(marker) {
 
-        // create a HTML element for each feature
         var el = document.createElement('div');
         el.className = 'marker';
 
-        // make a marker for each feature and add to the map
         new mapboxgl.Marker(el)
         .setLngLat(marker.geometry.coordinates)
         .addTo(map);
