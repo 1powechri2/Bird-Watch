@@ -34,9 +34,24 @@
           center: [-96, 37.8],
           zoom: 3
         });
+        var locations = JSON.parse('<%= @map_geo_json.to_json %>'.replace(/&quot;/g, '"'));
+
         var geojson = {
         type: 'FeatureCollection',
-        features: $(<% @map_geo_json %>)};
+        features: locations
+        };
+      // add markers to map
+        geojson.features.forEach(function(marker) {
+
+        // create a HTML element for each feature
+        var el = document.createElement('div');
+        el.className = 'marker';
+
+        // make a marker for each feature and add to the map
+        new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+        });
       </script>
       <%= will_paginate @birds%>
   </body>

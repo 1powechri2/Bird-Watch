@@ -18,7 +18,7 @@ class MapPresenter
     {"type": "Feature",
     "geometry": {
     "type": "Point",
-    "coordinates": [lat, long]
+    "coordinates": [long, lat]
     },
     "properties": {
     "location": location,
