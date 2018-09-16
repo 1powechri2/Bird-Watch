@@ -7,8 +7,10 @@ class MapPresenter
 
   def geo_json
     geo_jsons = []
+    count = 0.0
     @birds.each do |bird|
-      geo_jsons << to_geo_json(bird.lat, bird.long, bird.location,
+      count += 0.00001
+      geo_jsons << to_geo_json((bird.lat + count), bird.long, bird.location,
                                bird.common_name, bird.scientific_name, bird.observation_date)
     end
     geo_jsons
