@@ -41,27 +41,26 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-nav {
+.home_header {
 	font-family: 'Comfortaa', cursive;
   height: 60px;
   font-size: 50px;
   line-height: 75px;
-}
-.nav {
-  padding-left: 10px;
+	padding-left: 10px;
 	color: #283560;
 }
+
 body {
-	background-color: #85ABEA;
-}
-.dashboard_body {
 	height: 900px;
-  background-image: url(/assets/dn27643-1_800.jpg);
-  background-position: 0% 30%;
-  background-repeat: no-repeat;
-  background-size: cover;
+	background-color: #85ABEA;
+	background-image: url(/assets/flock.jpg);
+	background-position: 0% 30%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
+
 .body_text {
+	height: 800px;
 	font-family: 'Comfortaa', cursive;
 	color: #EED9A0;
 	text-shadow: 2px 2px 2px #6D5B43;
@@ -75,7 +74,7 @@ footer {
 	background-color: #864E3D;
 	height: 40px;
 	width: 100%;
-	margin-top: 250px;
+
 }
 
 .footer_text {
@@ -86,7 +85,7 @@ footer {
 }
 
 .search {
-	height: 650px;
+	height: 900px;
 	background-image: url(/assets/yellow-warbler.jpg);
   background-position: 0% 30%;
   background-repeat: no-repeat;
@@ -123,14 +122,15 @@ footer {
 }
 
 #map {
-		padding-bottom: 400px;
-		top: 0;
+		position: absolute;
+		height: 500px;
+		top: 675px;
 		bottom: 0;
-		width: 50%;
+		width: 100%;
 }
 
 .marker {
-	background-image: url(/assets/Agility3.png);
+	background-image: url(/assets/images-1.png);
 	background-size: cover;
 	width: 35px;
 	height: 35px;

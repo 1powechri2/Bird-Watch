@@ -7,7 +7,7 @@ describe MapPresenter do
                     sciName: "Chordeiles minor",
                     locName: "Garland Park",
                     obsDt: "2018-09-12 19:30",
-                    lat: 39.6948377,
+                    lat: 39.69485770000001,
                     lng: 104.9179745,
                     locationPrivate: true}
 
@@ -15,7 +15,7 @@ describe MapPresenter do
                     sciName: "Chordeiles minor",
                     locName: "Garlajhnd Park",
                     obsDt: "2018-09-12 19:30",
-                    lat: 34.6948377,
+                    lat: 39.694847700000004,
                     lng: 14.9179745,
                     locationPrivate: true}
 
@@ -27,7 +27,7 @@ describe MapPresenter do
       expect(map.geo_json).to eq([{"type": "Feature",
                                   "geometry": {
                                   "type": "Point",
-                                  "coordinates": [bird1.lat, bird1.long]
+                                  "coordinates": [bird1.long, bird1.lat]
                                   },
                                   "properties": {
                                   "location": bird1.location,
@@ -38,7 +38,7 @@ describe MapPresenter do
                                   {"type": "Feature",
                                   "geometry": {
                                   "type": "Point",
-                                  "coordinates": [bird2.lat, bird2.long]
+                                  "coordinates": [bird2.long, bird2.lat]
                                   },
                                   "properties": {
                                   "location": bird2.location,

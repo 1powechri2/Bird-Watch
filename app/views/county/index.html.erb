@@ -2,27 +2,28 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body class="results_body">
-    <p class="results_header">HERE ARE THE LATEST RESULTS FOR THE COUNTY YOU PROVIDED</p><p class="results_link"><%= link_to "Back To Location Search", locations_path%></p><br>
+    <p class="results_header">HERE ARE THE LATEST RESULTS FOR THE COUNTY YOU PROVIDED</p><p class="results_link"><%= link_to "Back To Location Search", locations_path%> <%= will_paginate @birds%></p><br>
       <div class="container">
+        <% counter = 0 %>
         <% @birds.each do |bird| %>
           <div class="bird">
             <p>Common Name: <%= bird.common_name %></p>
             <p>Scientific Name: <%= bird.scientific_name %></p>
-            <p><%= link_to "Go to This Bird's Wikipedia", "https://en.wikipedia.org/wiki/#{bird.scientific_name.downcase}", target: :_blank%></p>
             <p>Location: <%= bird.location %></p>
             <p>Date and Time of Observation: <%= bird.observation_date %></p>
-            <p>Latitude: <%= bird.lat %></p>
-            <p>Longitude: <%= bird.long %></p>
             <p><%= bird.private_location? %></p><br>
+            <button id="fly <%= counter %>", onclick="scrollWin()">Click To See Location on Map</button>
+            <p><%= link_to "Go to This Bird's Wikipedia", "https://en.wikipedia.org/wiki/#{bird.scientific_name.downcase}", target: :_blank%></p>
           </div>
+        <% counter += 1 %>
         <% end %>
       </div>
       <div id='map'></div>
@@ -53,7 +54,83 @@
         .setHTML('<h3>' + marker.properties.common_name + '</h3><p>' + marker.properties.scientific_name + '</p><p>' + marker.properties.location + '</p>'))
         .addTo(map);
         });
+
+        function scrollWin() {
+          window.scrollTo(0, 500);
+        }
+
+        document.getElementById('fly 0').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[0].geometry.coordinates[0], locations[0].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 1').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[1].geometry.coordinates[0], locations[1].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 2').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[2].geometry.coordinates[0], locations[2].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 3').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[3].geometry.coordinates[0], locations[3].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 4').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[4].geometry.coordinates[0], locations[4].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 5').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[5].geometry.coordinates[0], locations[5].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 6').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[6].geometry.coordinates[0], locations[6].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 7').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[7].geometry.coordinates[0], locations[7].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 8').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[8].geometry.coordinates[0], locations[8].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 9').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[9].geometry.coordinates[0], locations[9].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 10').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[10].geometry.coordinates[0], locations[10].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
+        document.getElementById('fly 11').addEventListener('click', function () {
+            map.flyTo({
+                center: [locations[11].geometry.coordinates[0], locations[11].geometry.coordinates[1]],
+                zoom: 20
+            });
+        });
       </script>
-      <%= will_paginate @birds%>
   </body>
 </html>
