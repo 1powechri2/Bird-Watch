@@ -3,19 +3,38 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
   </head>
+  <header>
+    <div class=home_header><h1>Welcome To Birdwatch</h1></div>
+  </header>
   <body class=dashboard_body>
-    <header>
-      <div class=home_header><h1>Welcome To Birdwatch</h1></div>
-    </header>
-      <div class=body_text><h3>Birdwatch is an application where you can view information on species <br>
-      that have been sighted in your area. One of the aims of birdwatch is to<br>
-      observe threat and endangerment data to encourage the preservation of<br> species
-      whose habitats are changing and whose resources are becoming compromised.<br>
-      <br>
-      To use Birdwatch <%= link_to "click here", locations_path %> and input your zip code or choose a state<br>
-      and then a county. You will then see a list of bird species that have been<br> recently spotted near you.
-      Click on a link to an individual species' wiki if you are unfamiliar with it to learn more about it. Enjoy!</h3>
-    </div>
+      <div class=body_text>Birdwatch is an application where you can view information on species <br>
+      that have been sighted in your area.
+      </div>
+      <div class="login">
+        <% if current_user == nil %>
+        <%= link_to "Login Using Google", new_user_path %>
+        <% else %>
+        <p> Welocme <%= current_user.first_name %> <%= current_user.last_name %></p>
+        <% end %>
+      </div>
+      <div class="search">
+        <div class="search_fields">
+          <p>Search for Bird Sightings by Zip Code</p>
+          <div class='zip_field'>
+            <%= form_tag zip_location_path, method: :get do %>
+              <%= text_field_tag :zip %>
+              <%= submit_tag 'Get Data By Zip' %>
+            <% end %>
+          </div>
+          <p>Choose a State from the Dropdown in Order to Find a Specific County</p>
+          <div class='state_field'>
+            <%= form_tag state_location_path, method: :get do |f| %>
+            <%= select_tag :state,  options_for_select(@location.states) %>
+            <%= submit_tag 'Get Counties By State' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
   </body>
   <footer>
     <div class=footer_text><p>admin: chris.ian.powell@gmail.com</p></div>

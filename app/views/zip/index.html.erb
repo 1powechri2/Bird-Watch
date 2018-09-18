@@ -10,7 +10,7 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body class="results_body">
-    <p class="results_header">HERE ARE THE LATEST RESULTS FOR THE ZIP YOU PROVIDED</p><p class="results_link"><%= link_to "Back To Location Search", locations_path%></p><br>
+    <p class="results_header">HERE ARE THE LATEST RESULTS FOR THE ZIP YOU PROVIDED</p><p class="results_link"><%= link_to "Back To Location Search", locations_path%><%= will_paginate @birds %></p><br>
       <div class="container">
         <% counter = 0 %>
         <% @birds.each do |bird| %>
@@ -133,6 +133,5 @@
             });
         });
       </script>
-      <%= will_paginate @birds %>
   </body>
 </html>

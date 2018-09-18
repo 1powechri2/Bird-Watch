@@ -51,27 +51,27 @@ table {
 }
 
 body {
-	height: 900px;
+	padding-top: 200px;
 	background-color: #85ABEA;
-	background-image: url(/assets/flock.jpg);
-	background-position: 0% 30%;
+	background-image: url(/assets/yellow-warbler.jpg);
+	background-position: 30% 30%;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
 .body_text {
-	height: 800px;
 	font-family: 'Comfortaa', cursive;
 	color: #EED9A0;
 	text-shadow: 2px 2px 2px #6D5B43;
 	font-size: 35px;
 	line-height: 50px;
 	padding-top: 35px;
-	padding-left: 45px;
+	padding-left: 35px;
 }
 
 footer {
-	background-color: #864E3D;
+	margin-top: 300px;
+	background-color: #283560;
 	height: 40px;
 	width: 100%;
 
@@ -85,8 +85,6 @@ footer {
 }
 
 .search {
-	height: 900px;
-	background-image: url(/assets/yellow-warbler.jpg);
   background-position: 0% 30%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,6 +93,12 @@ footer {
 .search_fields {
 	padding-top: 10px;
 	padding-left: 20px;
+	line-height: 25px;
+}
+
+#homepage_container {
+   min-height:100%;
+   position:relative;
 }
 
 .container {
@@ -122,9 +126,9 @@ footer {
 }
 
 #map {
-		position: absolute;
+		position: relative;
 		height: 500px;
-		top: 675px;
+		top: 0px;
 		bottom: 0;
 		width: 100%;
 }
