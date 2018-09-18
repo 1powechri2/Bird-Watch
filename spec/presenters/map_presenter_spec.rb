@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe MapPresenter do
   context 'methods' do
-    xit 'can create geoJson' do
+    it 'can create geoJson' do
       attributes1 = {comName: "Common Nighthawk",
                     sciName: "Chordeiles minor",
                     locName: "Garland Park",
@@ -27,7 +27,7 @@ describe MapPresenter do
       expect(map.geo_json).to eq([{"type": "Feature",
                                   "geometry": {
                                   "type": "Point",
-                                  "coordinates": [bird1.long, bird1.lat]
+                                  "coordinates": [bird1.long, 39.69486770000001]
                                   },
                                   "properties": {
                                   "location": bird1.location,
@@ -38,7 +38,7 @@ describe MapPresenter do
                                   {"type": "Feature",
                                   "geometry": {
                                   "type": "Point",
-                                  "coordinates": [bird2.long, bird2.lat]
+                                  "coordinates": [bird2.long, 39.6948677]
                                   },
                                   "properties": {
                                   "location": bird2.location,

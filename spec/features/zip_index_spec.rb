@@ -6,10 +6,6 @@ describe 'A user can see latest bird sightings' do
       VCR.use_cassette("zip_birds") do
         visit root_path
 
-        click_on 'click here'
-
-        expect(current_path).to eq(locations_path)
-
         fill_in :zip, with: 80203
 
         click_on 'Get Data By Zip'
