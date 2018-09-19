@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   post '/users/:id/favorites', to: 'users#create', as: 'favorites'
   resources :users, only: [:show]
   delete '/users', to: 'users#destroy'
+  delete '/session', to: 'session#destroy'
 end
