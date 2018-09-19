@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_18_030418) do
+ActiveRecord::Schema.define(version: 2018_09_18_233428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "data_base_birds", force: :cascade do |t|
+    t.string "comName"
+    t.string "sciName"
+    t.string "locName"
+    t.string "obsDt"
+    t.string "lat"
+    t.string "lng"
+    t.boolean "locationPrivate"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "uid"

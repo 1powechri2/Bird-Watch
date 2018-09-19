@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Bird do
-  it 'can be created' do
+  it 'can create a bird object' do
     attributes = {comName: "Dood",
                   sciName: "Doodicus",
                   locName: "Our house",
@@ -20,5 +20,23 @@ describe Bird do
     expect(bird.lat).to eq(attributes[:lat])
     expect(bird.long).to eq(attributes[:lng])
     expect(bird.private).to eq(attributes[:locationPrivate])
+  end
+  it 'can create a bird database object' do
+    bird = DataBaseBird.create(comName: "Dood",
+                      sciName: "Doodicus",
+                      locName: "Our house",
+                      obsDt: "Nowtober 45, 202022",
+                      lat: '34.333',
+                      lng: '-01.001',
+                      locationPrivate: true)
+
+    expect(bird.id).to eq(1)
+    expect(bird.comName).to eq("Dood")
+    expect(bird.sciName).to eq("Doodicus")
+    expect(bird.locName).to eq("Our house")
+    expect(bird.obsDt).to eq("Nowtober 45, 202022")
+    expect(bird.lat).to eq('34.333')
+    expect(bird.lng).to eq('-01.001')
+    expect(bird.locationPrivate).to eq(true)
   end
 end

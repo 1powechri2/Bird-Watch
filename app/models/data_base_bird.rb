@@ -1,0 +1,3 @@
+class DataBaseBird < ApplicationRecord
+
+end
