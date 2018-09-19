@@ -29,6 +29,7 @@ group :development, :test do
   gem 'vcr'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'skylight'
 end
 
 group :development do
