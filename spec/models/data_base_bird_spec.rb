@@ -11,7 +11,7 @@ describe DataBaseBird do
                         locationPrivate: true)
 
     bird = DataBaseBird.find(bird.id)
-    
+
     expect(bird.comName).to eq("Dood")
     expect(bird.sciName).to eq("Doodicus")
     expect(bird.locName).to eq("Our house")
@@ -19,5 +19,8 @@ describe DataBaseBird do
     expect(bird.lat).to eq('34.333')
     expect(bird.lng).to eq('-01.001')
     expect(bird.locationPrivate).to eq(true)
+  end
+  context 'relationships' do
+    it {should have_many(:user_birds)}
   end
 end
