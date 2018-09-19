@@ -18,12 +18,12 @@
         <% counter = 0 %>
         <% @birds.each do |bird| %>
           <div class="bird">
-            <p>Common Name: <%= bird.comName %></p>
-            <p>Scientific Name: <%= bird.sciName %></p>
-            <p>Location: <%= bird.locName %></p>
-            <p>Date and Time of Observation: <%= bird.obsDt %></p>
+            <p>Common Name: <%= bird.common_name %></p>
+            <p>Scientific Name: <%= bird.scientific_name %></p>
+            <p>Location: <%= bird.location %></p>
+            <p>Date and Time of Observation: <%= bird.observation_date %></p>
             <button id="fly <%= counter %>", onclick="scrollWin()">Click To See Location on Map</button>
-            <p><%= link_to "Go to This Bird's Wikipedia", "https://en.wikipedia.org/wiki/#{bird.sciName.downcase}", target: :_blank%></p>
+            <p><%= link_to "Go to This Bird's Wikipedia", "https://en.wikipedia.org/wiki/#{bird.scientific_name.downcase}", target: :_blank%></p>
           </div>
         <% counter += 1 %>
         <% end %>

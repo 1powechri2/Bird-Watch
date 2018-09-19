@@ -7,9 +7,9 @@ class UsersController < ApplicationController
   def create
     user = User.find(params[:id])
 
-    bird = DataBaseBird.create(comName: params[:common_name],
-    sciName: params[:scientific_name], locName: params[:location],
-    obsDt: params[:time], lat: params[:lat], lng: params[:lng])
+    bird = DataBaseBird.create(common_name: params[:common_name],
+    scientific_name: params[:scientific_name], location: params[:location],
+    observation_date: params[:time], lat: params[:lat], long: params[:lng])
 
     ubird = UserBird.create(user_id: user.id, data_base_bird_id: bird.id)
 

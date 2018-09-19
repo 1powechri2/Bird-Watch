@@ -18,13 +18,13 @@ describe User do
                  }
     bird = Bird.new(attributes)
 
-    db_bird = DataBaseBird.create(comName: bird.common_name,
-                        sciName: bird.scientific_name,
-                        locName: bird.location,
-                        obsDt: bird.observation_date,
+    db_bird = DataBaseBird.create(common_name: bird.common_name,
+                        scientific_name: bird.scientific_name,
+                        location: bird.location,
+                        observation_date: bird.observation_date,
                         lat: bird.lat,
-                        lng: bird.long,
-                        locationPrivate: bird.private)
+                        long: bird.long,
+                        private: bird.private)
 
     user_bird = UserBird.create(user_id: user.id, data_base_bird_id: db_bird.id)
 
