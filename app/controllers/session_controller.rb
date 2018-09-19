@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class SessionController < ApplicationController
   def create
     @user = User.create(uid: request.env['omniauth.auth']['uid'],
                 first_name: request.env['omniauth.auth']['info']['first_name'],
