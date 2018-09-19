@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/auth/google_oauth2/callback', to: 'session#create'
   post '/users/:id/favorites', to: 'users#create', as: 'favorites'
   resources :users, only: [:show]
+  delete '/users', to: 'users#destroy'
 end

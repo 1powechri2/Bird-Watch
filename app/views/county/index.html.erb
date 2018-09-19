@@ -25,7 +25,7 @@
             <p>Location: <%= bird.location %></p>
             <p>Date and Time of Observation: <%= bird.observation_date %></p>
             <p><%= bird.private_location? %></p><br>
-            <button id="fly <%= counter %>", onclick="scrollWin()">Click To See Location on Map</button>
+            <button id="fly <%= counter %>", onclick="myFunction()">Click To See Location on Map</button>
             <p><%= link_to "Go to This Bird's Wikipedia", "https://en.wikipedia.org/wiki/#{bird.scientific_name.downcase}", target: :_blank%></p>
           </div>
         <% counter += 1 %>
@@ -60,8 +60,9 @@
         .addTo(map);
         });
 
-        function scrollWin() {
-          window.scrollTo(0, 500);
+        function myFunction() {
+          var elmnt = document.getElementById("map");
+          elmnt.scrollIntoView();
         }
 
         document.getElementById('fly 0').addEventListener('click', function () {

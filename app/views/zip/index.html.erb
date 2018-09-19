@@ -14,13 +14,18 @@
       <div class="container">
         <% counter = 0 %>
         <% @birds.each do |bird| %>
+        <% if current_user != nil %>
+        <%= link_to 'Add To Favorites', favorites_path(current_user, :common_name => bird.common_name,
+          :scientific_name => bird.scientific_name, :location => bird.location, :lat => bird.lat, :lng => bird.long, :time => bird.observation_date,
+          :location_private => bird.private_location?), method: :post %>
+        <% end %>
           <div class="bird">
             <p>Common Name: <%= bird.common_name %></p>
             <p>Scientific Name: <%= bird.scientific_name %></p>
             <p>Location: <%= bird.location %></p>
             <p>Date and Time of Observation: <%= bird.observation_date %></p>
             <p><%= bird.private_location? %></p>
-            <button id="fly <%= counter %>", onclick="scrollWin()">Click To See Location on Map</button>
+            <button id="fly <%= counter %>", onclick="myFunction()">Click To See Location on Map</button>
             <p><%= link_to "Go to This Bird's Wikipedia", "https://en.wikipedia.org/wiki/#{bird.scientific_name.downcase}", target: :_blank%></p><br>
           </div>
         <% counter += 1 %>
@@ -56,8 +61,9 @@
         .addTo(map);
         });
 
-        function scrollWin() {
-          window.scrollTo(0, 500);
+        function myFunction() {
+          var elmnt = document.getElementById("map");
+          elmnt.scrollIntoView();
         }
 
         document.getElementById('fly 0').addEventListener('click', function () {
