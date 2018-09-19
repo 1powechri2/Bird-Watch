@@ -14,7 +14,7 @@
         <% if current_user == nil %>
         <%= link_to "Login Using Google", new_user_path %>
         <% else %>
-        <p> Welcome <%= current_user.first_name %> <%= current_user.last_name %></p>
+        <p> Welcome <%= current_user.first_name %> <%= current_user.last_name %> <%= link_to "Favorites Page", user_path(current_user) %> </p>
         <% end %>
       </div>
       <div class="search">
