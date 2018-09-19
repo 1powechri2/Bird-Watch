@@ -5,8 +5,8 @@ class CreateDataBaseBirds < ActiveRecord::Migration[5.2]
       t.string :sciName
       t.string :locName
       t.string :obsDt
-      t.integer :lat
-      t.integer :lng
+      t.float :lat
+      t.float :lng
       t.boolean :locationPrivate
     end
   end

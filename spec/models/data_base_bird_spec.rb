@@ -6,8 +6,8 @@ describe DataBaseBird do
                         scientific_name: "Doodicus",
                         location: "Our house",
                         observation_date: "Nowtober 45, 202022",
-                        lat: '34.333',
-                        long: '-01.001',
+                        lat: 34.333,
+                        long: -1.001,
                         private: true)
 
     bird = DataBaseBird.find(bird.id)
@@ -16,8 +16,8 @@ describe DataBaseBird do
     expect(bird.scientific_name).to eq("Doodicus")
     expect(bird.location).to eq("Our house")
     expect(bird.observation_date).to eq("Nowtober 45, 202022")
-    expect(bird.lat).to eq('34.333')
-    expect(bird.long).to eq('-01.001')
+    expect(bird.lat).to eq(34.333)
+    expect(bird.long).to eq(-1.001)
     expect(bird.private).to eq(true)
   end
   context 'relationships' do

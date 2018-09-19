@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2018_09_19_142406) do
     t.string "scientific_name"
     t.string "location"
     t.string "observation_date"
-    t.integer "lat"
-    t.integer "long"
+    t.float "lat"
+    t.float "long"
     t.boolean "private"
   end
 
