@@ -11,7 +11,7 @@
   </head>
   <body class="results_body">
     <p class="results_header">Welcome <%= @user.first_name %> <%= @user.last_name %> </p><p class="results_link">
-      <%= link_to "Back To Location Search", root_path%> <%= will_paginate @birds%> <%= button_to 'logout', session_path, method: :delete  %></p></p><br>
+      <%= link_to "Back To Location Search", root_path%> <%= will_paginate @birds%> <%= button_to 'logout', session_path(current_user), method: :delete  %></p></p><br>
       <div class="container">
         <% counter = 0 %>
         <% @birds.each do |bird| %>
