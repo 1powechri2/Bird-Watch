@@ -1,4 +1,4 @@
-#Birdwatch
+# Birdwatch
 
 Birdwatch is a web based application that provides bird sighting data based on a user provided location. 
 The data is supplied by the Cornell University Department of Ornithology's ebird API, which is a collection 
