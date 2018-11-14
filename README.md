@@ -11,3 +11,5 @@ Google account name and password. Once they are authorized they have the option 
 reference.
 
 Link to Site: https://birdwatcherz.herokuapp.com/
+
+![Alt text](./app/assets/images/root_page.png?raw=true)
