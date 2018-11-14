@@ -1,7 +1,7 @@
 # Birdwatch
 Link to Site: https://birdwatcherz.herokuapp.com/
 
-Birdwatch is a web based application that provides bird sighting data based on a user provided location. 
+Birdwatch provides bird sighting data based on a user provided location. 
 The data is supplied by the Cornell University Department of Ornithology's ebird API, which is a collection 
 of user submitted bird sightings. At the home page the user can submit a postal code or chose a state from a 
 dropdown list in order to present another dropdown list of counties from which they can choose.
