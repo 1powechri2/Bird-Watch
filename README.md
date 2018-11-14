@@ -12,4 +12,4 @@ reference.
 
 Link to Site: https://birdwatcherz.herokuapp.com/
 
-![Alt text](./app/assets/images/root_page.png?raw=true)
+![Alt text](./app/assets/images/homepage.png?raw=true)
