@@ -43,20 +43,19 @@ table {
 }
 .home_header {
 	font-family: 'Comfortaa', cursive;
-  height: 60px;
-  font-size: 50px;
-  line-height: 75px;
-	padding-left: 10px;
-	color: #283560;
+  color: #283560;
+	font-size: 60px;
+	margin-left: 20px;
+	margin-top: 15px;
 }
 
-body {
-	padding-top: 200px;
+html {
 	background-color: #85ABEA;
 	background-image: url(/assets/yellow-warbler.jpg);
-	background-position: 30% 30%;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-origin: content-box;
+	background-attachment: fixed;
 }
 
 .body_text {
@@ -64,9 +63,15 @@ body {
 	color: #EED9A0;
 	text-shadow: 2px 2px 2px #6D5B43;
 	font-size: 35px;
+	margin-top: 10px;
+	margin-left: 20px;
 	line-height: 50px;
-	padding-top: 35px;
-	padding-left: 35px;
+}
+
+.login {
+	font-family: 'Comfortaa', cursive;
+	margin-top: 10px;
+	margin-left: 20px;
 }
 
 footer {
@@ -80,8 +85,6 @@ footer {
 .footer_text {
 	font-family: 'Comfortaa', cursive;
 	color: #EED9A0;
-	padding-left: 10px;
-	padding-top: 10px;
 }
 
 .search {

@@ -33,8 +33,8 @@
             <%= submit_tag 'Get Counties By State' %>
             <% end %>
           </div>
+          <div id='county_field'>
           <p>Search for Bird Sightings by County</p>
-          <div class='county_field'>
             <%= form_tag county_birds_path, method: :get do |f| %>
             <%= select_tag :county,  options_for_select(@locations.state_counties) %>
             <%= submit_tag 'Get Birds By County' %>
