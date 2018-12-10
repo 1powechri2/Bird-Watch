@@ -6,6 +6,11 @@
   </head>
   <header>
     <div class=home_header><h1><%= t 'site.welcome_message' %></h1></div>
+    <div class='language_link'>
+      Languages:
+      <%= link_to_unless_current 'Español', locale: 'en'%>
+      <%= link_to_unless_current 'English', locale: 'es'%>
+    </div>
   </header>
   <body class=dashboard_body>
       <p class=body_text><%= t 'site.body' %></p>
