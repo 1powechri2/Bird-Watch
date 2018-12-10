@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Bird Watch</title>
+    <meta charset='utf-8' />
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <meta charset='utf-8' />
-    <title>Bird Watch</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body class="results_body">
-    <p class="results_header">Welcome <%= @user.first_name %> <%= @user.last_name %> </p><p class="results_link">
-      <%= link_to "Back To Location Search", root_path%> <%= will_paginate @birds%> <%= button_to 'logout', session_path(current_user), method: :delete  %></p></p><br>
+    <p class="results_header"><%= t 'user.welcome'  %> <%= @user.first_name %> <%= @user.last_name %></p>
+    <p class="results_link"><%= link_to t('location.search'), root_path%> <%= will_paginate @birds%>
+      <%= button_to t('user.logout'), session_path(current_user), method: :delete  %></p>
       <div class="container">
         <% counter = 0 %>
         <% @birds.each do |bird| %>
           <div class="bird">
-            <p>Common Name: <%= bird.common_name %></p>
-            <p>Scientific Name: <%= bird.scientific_name %></p>
-            <p>Location: <%= bird.location %></p>
-            <p>Date and Time of Observation: <%= bird.observation_date %></p>
-            <button id="fly <%= counter %>", onclick="myFunction()">Click To See Location on Map</button>
-            <p><%= link_to "Go to This Bird's Wikipedia", "https://en.wikipedia.org/wiki/#{bird.scientific_name.downcase}", target: :_blank%></p>
-            <td><%= button_to 'Remove Bird', users_path(@user, :bird_id => bird.id), method: :delete  %></td><br>
+            <p><%= t 'bird.c_name' %> <%= bird.common_name %></p>
+            <p><%= t 'bird.s_name' %> <%= bird.scientific_name %></p>
+            <p><%= t 'bird.location' %> <%= bird.location %></p>
+            <p><%= t 'bird.date' %> <%= bird.observation_date %></p>
+            <button id="fly <%= counter %>", onclick="myFunction()"><%= t 'map.message' %></button>
+            <p><%= link_to link_to t('wiki.message'), "https://en.wikipedia.org/wiki/#{bird.scientific_name.downcase}", target: :_blank%></p>
+            <td><%= button_to t('user.remove_bird'), users_path(@user, :bird_id => bird.id), method: :delete  %></td><br>
           </div>
         <% counter += 1 %>
         <% end %>

@@ -54,8 +54,6 @@ html {
 	background-image: url(/assets/yellow-warbler.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-origin: content-box;
-	background-attachment: fixed;
 }
 
 .body_text {
@@ -84,6 +82,8 @@ footer {
 
 .footer_text {
 	font-family: 'Comfortaa', cursive;
+	margin-left: 20px;
+	margin-top: 20px;
 	color: #EED9A0;
 }
 

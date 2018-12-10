@@ -5,41 +5,32 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
   </head>
   <header>
-    <div class=home_header><h1>Welcome To Birdwatch</h1></div>
+    <div class=home_header><h1><%= t 'site.welcome_message' %></h1></div>
   </header>
   <body class=dashboard_body>
-      <div class=body_text>Birdwatch is an application where you can view information on species <br>
-      that have been sighted in your area.
-      </div>
+      <p class=body_text><%= t 'site.body' %></p>
       <div class="login">
         <% if current_user == nil %>
-        <%= link_to "--Login Using Google--", new_user_path %>
+        <%= link_to t('site.login'), new_user_path %>
         <% else %>
-        <p> Welcome <%= current_user.first_name %> <%= current_user.last_name %> <%= link_to "Favorites Page", user_path(current_user) %>
-        <%= button_to 'logout', session_path, method: :delete %></p>
+        <p><%= t 'user.welcome' %> <%= current_user.first_name %> <%= current_user.last_name %> <%= link_to t('user.favorites'), user_path(current_user) %>
+        <%= button_to t('user.logout'), session_path, method: :delete %></p>
         <% end %>
       </div>
       <div class="search">
         <div class="search_fields">
-          <p>Search for Bird Sightings by Zip Code</p>
+          <p><%= t 'zipcode.search' %></p>
           <div class='zip_field'>
             <%= form_tag zip_location_path, method: :get do %>
               <%= text_field_tag :zip %>
-              <%= submit_tag 'Get Data By Zip' %>
+              <%= submit_tag t('zipcode.submit') %>
             <% end %>
           </div>
           <div class='state_field'>
-          <p>Choose a State from the Dropdown in Order to Find a Specific County</p>
+          <p><%= t 'state.search' %></p>
             <%= form_tag state_location_path, method: :get do |f| %>
             <%= select_tag :state,  options_for_select(@location.states) %>
-            <%= submit_tag 'Get Counties By State' %>
-            <% end %>
-          </div>
-          <div id='county_field'>
-          <p>Search for Bird Sightings by County</p>
-            <%= form_tag county_birds_path, method: :get do |f| %>
-            <%= select_tag :county,  options_for_select(@location.state_counties) %>
-            <%= submit_tag 'Get Birds By County' %>
+            <%= submit_tag t('state.submit') %>
             <% end %>
           </div>
         </div>
@@ -48,8 +39,4 @@
   <footer>
     <div class=footer_text><p>admin: chris.ian.powell@gmail.com</p></div>
   </footer>
-  <script>
-    var county_field = document.getElementById('county_field')
-    county_field.style.display = 'none'
-  </script>
 </html>

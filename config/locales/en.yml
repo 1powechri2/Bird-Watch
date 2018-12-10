@@ -1,33 +1,35 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  site:
+    welcome_message: 'Welcome To BirdWatch'
+    body: 'Birdwatch is an application where you can view information on species that have been sighted in your area.'
+    login: '--Login Using Google--'
+  user:
+    welcome: 'Welcome'
+    favorites: 'Favorites Page'
+    add_favorite: 'Add To Favorites'
+    logout: 'Log Out'
+    remove_bird: 'Remove Bird from Favorites'
+  zipcode:
+    search: 'Search for Bird Sightings by Zip Code'
+    submit: 'Get Data By Zip'
+    header: 'HERE ARE THE LATEST RESULTS FOR THE ZIP YOU PROVIDED'
+  state:
+    search: 'Choose a State from the Dropdown in Order to Find a Specific County'
+    submit: 'Get Counties By State'
+  county:
+    search: 'Search Counties in'
+    submit: 'Get Birds By County'
+    header: 'HERE ARE THE LATEST RESULTS FOR THE COUNTY YOU PROVIDED'
+  location:
+    search: 'Back To Location Search'
+  bird:
+    c_name: 'Common Name:'
+    s_name: 'Scientific Name:'
+    location: 'Location:'
+    date: 'Date and Time of Observation:'
+    private_location: 'This observation was taken at a private location'
+    public_location: 'This observation was taken at a public location'
+  map:
+    message: 'Click To See Location on Map'
+  wiki:
+    message: "Go to This Bird's Wikipedia"
