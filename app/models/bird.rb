@@ -19,9 +19,9 @@ class Bird
 
   def private_location?
     if @private
-      "This observation was taken at a private location"
+      I18n.t 'bird.private_location'
     else
-      "This observation was taken at a public location"
+      I18n.t 'bird.public_location'
     end
   end
 end

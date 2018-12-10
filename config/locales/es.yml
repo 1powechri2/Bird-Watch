@@ -1,0 +1,35 @@
+es:
+  site:
+    welcome_message: 'Bienvenido a BirdWatch'
+    body: 'Birdwatch es una aplicación donde puede ver información sobre las especies que se han avistado en su área.'
+    login: '--Iniciar sesión usando Google--'
+  user:
+    welcome: 'Bienvenido'
+    favorites: 'Página de favoritos'
+    add_favorite: 'Agregar a los favoritos'
+    logout: 'Cerrar Sesión'
+    remove_bird: 'Eliminar pájaro de favoritos'
+  zipcode:
+    search: 'Búsqueda de avistamientos de aves por código postal'
+    submit: 'Obtener datos por zip'
+    header: 'AQUÍ ESTÁN LOS ÚLTIMOS RESULTADOS PARA EL CÓDIGO QUE PROPORCIONÓ'
+  state:
+    search: 'Elija un estado del menú desplegable para encontrar un condado específico'
+    submit: 'Obtener condados por estado'
+  county:
+    search: 'Buscar condados en'
+    submit: 'Obtener aves por condado'
+    header: 'AQUÍ ESTÁN LOS ÚLTIMOS RESULTADOS PARA EL CONDADO QUE PROPORCIONÓ'
+  location:
+    search: 'Volver a la búsqueda de ubicación'
+  bird:
+    c_name: 'Nombre común:'
+    s_name: 'Nombre científico:'
+    location: 'Ubicación:'
+    date: 'Fecha y hora de observación:'
+    private_location: 'Esta observación fue tomada en un lugar privado.'
+    public_location: 'Esta observación fue tomada en un lugar público.'
+  map:
+    message: 'Haga clic para ver la ubicación en el mapa'
+  wiki:
+    message: "Ir a la Wikipedia de este pájaro"

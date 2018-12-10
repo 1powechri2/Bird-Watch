@@ -1,5 +1,6 @@
 class LocationPresenter
-  attr_reader :states
+  attr_reader :states,
+              :state
 
   def initialize(state = nil)
     @states = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC',
@@ -7,6 +8,7 @@ class LocationPresenter
     'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE',
     'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
     'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']
+    @state = state
     @service = BirdService.new(state)
   end
 
