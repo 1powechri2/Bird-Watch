@@ -41,7 +41,22 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+html {
+	background-color: #85ABEA;
+	background-image: url(/assets/yellow-warbler.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 80px;
+}
+
 .home_header {
+	grid-column: 1 / span 7;
 	font-family: 'Comfortaa', cursive;
   color: #283560;
 	font-size: 60px;
@@ -49,11 +64,12 @@ table {
 	margin-top: 15px;
 }
 
-html {
-	background-color: #85ABEA;
-	background-image: url(/assets/yellow-warbler.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
+.language_link {
+	grid-column: 8 / span 3;
+	font-family: 'Comfortaa', cursive;
+	font-size: 17px;
+	margin-top: 47px;
+	margin-left: 15px;
 }
 
 .body_text {
@@ -83,7 +99,7 @@ footer {
 .footer_text {
 	font-family: 'Comfortaa', cursive;
 	margin-left: 20px;
-	margin-top: 20px;
+	padding-top: 10px;
 	color: #EED9A0;
 }
 
