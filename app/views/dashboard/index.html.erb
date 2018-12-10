@@ -8,8 +8,11 @@
     <div class=home_header><h1><%= t 'site.welcome_message' %></h1></div>
     <div class='language_link'>
       Languages:
-      <%= link_to_unless_current 'Español', locale: 'en'%>
-      <%= link_to_unless_current 'English', locale: 'es'%>
+      <% if I18n.locale == :en %>
+        <%= link_to_unless_current 'Para ver este sitio en español haga clic aquí', locale: 'es'%>
+      <% else %>
+        <%= link_to_unless_current 'To view this site in english click here', locale: 'en'%>
+      <% end %>
     </div>
   </header>
   <body class=dashboard_body>
