@@ -127,10 +127,7 @@ footer {
 }
 
 .results_body {
-	height: 750px;
-  background-image: url(/assets/cloud.jpg);
-  background-position: 0% 30%;
-  background-repeat: no-repeat;
+	background-image: url(/assets/cloud.jpg);
   background-size: cover;
 	font-family: 'IBM Plex Mono', monospace;
 	font-size: 12px;

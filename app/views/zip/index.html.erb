@@ -14,134 +14,134 @@
     <p class="results_link"><%= link_to t('location.search'), root_path%><%= will_paginate @birds %></p>
     <p><% if current_user != nil %>
       <%= link_to t('user.favorites'), user_path(current_user) %>
-      <% end %></p>
-      <div class="container">
-        <% counter = 0 %>
-        <% @birds.each do |bird| %>
-          <div class="bird">
-            <p><%= t 'bird.c_name' %> <%= bird.common_name %></p>
-            <p><%= t 'bird.s_name' %> <%= bird.scientific_name %></p>
-            <p><%= t 'bird.location' %> <%= bird.location %></p>
-            <p><%= t 'bird.date' %> <%= bird.observation_date %></p>
-            <p><%= bird.private_location? %></p>
-            <p><% if current_user != nil %>
-              <%= link_to t('user.add_favorite'), favorites_path(current_user, :common_name => bird.common_name,
-              :scientific_name => bird.scientific_name, :location => bird.location, :lat => bird.lat, :lng => bird.long, :time => bird.observation_date,
-              :location_private => bird.private_location?), method: :post %>
-              <% end %></p>
-            <button id="fly <%= counter %>", onclick="myFunction()"><%= t 'map.message' %></button>
-            <p><%= link_to t('wiki.message'), "https://en.wikipedia.org/wiki/#{bird.scientific_name.downcase}", target: :_blank%></p><br>
-          </div>
-        <% counter += 1 %>
-        <% end %>
-      </div>
-      <div id='map'></div>
-      <script>
-        var locations = JSON.parse('<%= @map_geo_json.to_json %>'.replace(/&quot;/g, '"'));
-
-        mapboxgl.accessToken = 'pk.eyJ1IjoiMXBvd2VjaHJpMiIsImEiOiJjam0wb2Z3MXcwN3Z2M3BvNnViMXg2cmM0In0.C8-oMYvIyi9lDJ4FLFH1EQ';
-
-        var map = new mapboxgl.Map({
-          container: 'map',
-          style: 'mapbox://styles/1powechri2/cjm0opst43pf62spbi4tw3okd',
-          center: [locations[0].geometry.coordinates[0], locations[0].geometry.coordinates[1]],
-          zoom: 5
-        });
-
-        var geojson = {
-        type: 'FeatureCollection',
-        features: locations
-        };
-
-        geojson.features.forEach(function(marker) {
-
-        var el = document.createElement('div');
-        el.className = 'marker';
-
-        new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(new mapboxgl.Popup({ offset: 25 })
-        .setHTML('<h3>' + marker.properties.common_name + '</h3><p>' + marker.properties.scientific_name + '</p><p>' + marker.properties.location + '</p>'))
-        .addTo(map);
-        });
-
-        function myFunction() {
-          var elmnt = document.getElementById("map");
-          elmnt.scrollIntoView();
-        }
-
-        document.getElementById('fly 0').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[0].geometry.coordinates[0], locations[0].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 1').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[1].geometry.coordinates[0], locations[1].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 2').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[2].geometry.coordinates[0], locations[2].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 3').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[3].geometry.coordinates[0], locations[3].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 4').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[4].geometry.coordinates[0], locations[4].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 5').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[5].geometry.coordinates[0], locations[5].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 6').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[6].geometry.coordinates[0], locations[6].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 7').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[7].geometry.coordinates[0], locations[7].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 8').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[8].geometry.coordinates[0], locations[8].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 9').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[9].geometry.coordinates[0], locations[9].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 10').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[10].geometry.coordinates[0], locations[10].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-        document.getElementById('fly 11').addEventListener('click', function () {
-            map.flyTo({
-                center: [locations[11].geometry.coordinates[0], locations[11].geometry.coordinates[1]],
-                zoom: 20
-            });
-        });
-      </script>
+    <% end %></p>
+    <div class="container">
+      <% counter = 0 %>
+      <% @birds.each do |bird| %>
+        <div class="bird">
+          <p><%= t 'bird.c_name' %> <%= bird.common_name %></p>
+          <p><%= t 'bird.s_name' %> <%= bird.scientific_name %></p>
+          <p><%= t 'bird.location' %> <%= bird.location %></p>
+          <p><%= t 'bird.date' %> <%= bird.observation_date %></p>
+          <p><%= bird.private_location? %></p>
+          <p><% if current_user != nil %>
+            <%= link_to t('user.add_favorite'), favorites_path(current_user, :common_name => bird.common_name,
+            :scientific_name => bird.scientific_name, :location => bird.location, :lat => bird.lat, :lng => bird.long, :time => bird.observation_date,
+            :location_private => bird.private_location?), method: :post %>
+            <% end %></p>
+          <button id="fly <%= counter %>", onclick="myFunction()"><%= t 'map.message' %></button>
+          <p><%= link_to t('wiki.message'), "https://en.wikipedia.org/wiki/#{bird.scientific_name.downcase}", target: :_blank%></p><br>
+        </div>
+      <% counter += 1 %>
+      <% end %>
+    </div>
   </body>
+  <div id='map'></div>
+  <script>
+    var locations = JSON.parse('<%= @map_geo_json.to_json %>'.replace(/&quot;/g, '"'));
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoiMXBvd2VjaHJpMiIsImEiOiJjam0wb2Z3MXcwN3Z2M3BvNnViMXg2cmM0In0.C8-oMYvIyi9lDJ4FLFH1EQ';
+
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/1powechri2/cjm0opst43pf62spbi4tw3okd',
+      center: [locations[0].geometry.coordinates[0], locations[0].geometry.coordinates[1]],
+      zoom: 5
+    });
+
+    var geojson = {
+      type: 'FeatureCollection',
+      features: locations
+    };
+
+    geojson.features.forEach(function(marker) {
+
+      var el = document.createElement('div');
+      el.className = 'marker';
+
+      new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .setPopup(new mapboxgl.Popup({ offset: 25 })
+      .setHTML('<h3>' + marker.properties.common_name + '</h3><p>' + marker.properties.scientific_name + '</p><p>' + marker.properties.location + '</p>'))
+      .addTo(map);
+    });
+
+    function myFunction() {
+      var elmnt = document.getElementById("map");
+      elmnt.scrollIntoView();
+    }
+
+    document.getElementById('fly 0').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[0].geometry.coordinates[0], locations[0].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 1').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[1].geometry.coordinates[0], locations[1].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 2').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[2].geometry.coordinates[0], locations[2].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 3').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[3].geometry.coordinates[0], locations[3].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 4').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[4].geometry.coordinates[0], locations[4].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 5').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[5].geometry.coordinates[0], locations[5].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 6').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[6].geometry.coordinates[0], locations[6].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 7').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[7].geometry.coordinates[0], locations[7].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 8').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[8].geometry.coordinates[0], locations[8].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 9').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[9].geometry.coordinates[0], locations[9].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 10').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[10].geometry.coordinates[0], locations[10].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+    document.getElementById('fly 11').addEventListener('click', function () {
+      map.flyTo({
+        center: [locations[11].geometry.coordinates[0], locations[11].geometry.coordinates[1]],
+        zoom: 20
+      });
+    });
+  </script>
 </html>
